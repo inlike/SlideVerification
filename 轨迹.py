@@ -32,7 +32,7 @@ a, b = get_tracks(138, 3, 'ease_out_expo')
 print(a, b)
 
 
-def get_tracks(self, distance):
+def get_tracks(distance):
     print(distance)
     distance += 20
     v = 0
