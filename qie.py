@@ -1,5 +1,4 @@
 
-from selenium import webdriver
 import requests
 import time
 import cv2
@@ -20,9 +19,9 @@ class test:
         self.driver.get('https://om.qq.com/userAuth/index')
         self.driver.find_element_by_xpath('//div[@class="other-type"]').click()
         email = self.driver.find_element_by_xpath('//input[@class="email-input error"]').send_keys(
-            "2551513277@qq.com")
+            "2551@qq.com")
         password = self.driver.find_element_by_xpath('//input[@placeholder="密码"]')
-        password.send_keys("123456lkj")
+        password.send_keys("1234")
         self.driver.find_element_by_xpath('//button[@class="btnLogin btn btn-primary"]').click()
         time.sleep(5)
         self.driver.switch_to_frame("tcaptcha_iframe")
@@ -97,7 +96,7 @@ class test:
 
     def run(self):
         distance = self.FindPic('slidebg.png', 'slideblock.png')[0]
-        distance = (distance-self.left+25)*0.5
+        distance = (distance-self.left*2)*0.5
         self.get_tracks(distance)
         self.crack_slider()
 
